@@ -1,0 +1,38 @@
+﻿.selected {
+    background-color: aqua;
+}
+
+.standings {
+    width: 100%;
+}
+
+.al_header 
+{
+    background-color: crimson;
+    color: white;
+    padding-left: 15px;
+}
+
+.nl_header 
+{
+    background-color: darkblue;
+    color: white;
+    padding-left: 15px;
+}
+
+.img { 
+    width: 4%; 
+    text-align: center; 
+}
+
+.team_name { 
+    width: 15%; 
+}
+
+.all_columns { 
+    width: 7%; 
+}
+
+.next_last { 
+    width: 20%; 
+}

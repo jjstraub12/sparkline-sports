@@ -1,0 +1,18 @@
+﻿.grid {background-color: #fff; margin: 5px 0 10px 0; border: solid 1px #525252; border-collapse:collapse; font-family:Calibri; color: #474747; width: 100%; }
+.grid td {
+        padding: 2px;
+        border: solid 1px #c1c1c1; }
+.grid th  {
+        padding : 4px 2px;
+        color: #525252;
+        /*background: #363670 url(../../img/grid-header.png) repeat-x top;*/
+        background: #c1c1c1;
+        border-left: solid 1px #525252;
+        font-size: 0.9em; }
+.grid .alt {
+        background: #fcfcfc url(../../img/grid-alt.png) repeat-x top; }
+.grid .pgr {background: #363670 url(../../img/grid-pgr.png) repeat-x top; }
+.grid .pgr table { margin: 3px 0; }
+.grid .pgr td { border-width: 0; padding: 0 6px; border-left: solid 1px #666; font-weight: bold; color: #fff; line-height: 12px; }  
+.grid .pgr a { color: Gray; text-decoration: none; }
+.grid .pgr a:hover { color: #000; text-decoration: none; }

@@ -12,59 +12,25 @@
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
     <webopt:bundlereference runat="server" path="~/Content/css" />
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
-    <style>
-        body {
-          margin: 0;
-          padding: 0;
-          font-family: Arial, Helvetica, sans-serif;
-        }
-
-        .topnav {
-          overflow: hidden;
-          background-color: #333;
-        }
-
-        .topnav a {
-          float: left;
-          color: #f2f2f2;
-          text-align: center;
-          padding: 10px 12px;
-          text-decoration: none;
-          font: bold 14px;
-        }
-
-        .topnav a:hover {
-          background-color: #ddd;
-          color: black;
-        }
-
-        .topnav a.active {
-          background-color: aqua;
-          color: black;
-        }
-        .nav_logo {
-          float: left;
-          display: block;
-          margin: auto;
-          height: 50px;
-        }
-    </style>
-
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="/css/menu.css" rel="stylesheet" />
 
 </head>
 <body>
-    <div id="nav" class="topnav">
-      <a href="/Default"><img src="/img/SPARKLINE_WhiteText_AquaLine.svg" alt="Sparkline Sports Logo" class="nav_logo" height="25"></a>
-      <a href="/Pages/MLB">MLB</a>
-      <a href="/Default">NBA</a>
-      <a href="/Default">NFL</a>
-      <a href="/Default">NCAAB</a>
-      <a href="/Default">NCAAF</a>
-      <a href="/About">ABOUT</a>
-      <a href="/Contact">CONTACT</a>
+    <div class="topnav">
+        <div id="nav" class="topnav" style="margin: auto; max-width: 1300px; border: none;">
+          <a href="/Default"><img id="imgLogo" src="/img/SPARKLINE_BlackText_BlackLine.svg" alt="Sparkline Sports Logo" class="nav_logo" style="height: 100%; width: auto;"></a>
+          <a href="/Pages/MLB" style="padding: 2px 12px;"><b>MLB</b></a>
+          <a href="/Pages/NBA" style="padding: 2px 12px;"><b>NBA</b></a>
+          <a href="/Pages/NFL" style="padding: 2px 12px;"><b>NFL</b></a>
+          <a href="/Pages/NCAAB" style="padding: 2px 12px;"><b>NCAAB</b></a>
+          <a href="/Pages/NCAAF" style="padding: 2px 12px;"><b>NCAAF</b></a>
+          <a href="/About" style="padding: 2px 12px;"><b>ABOUT</b></a>
+          <a href="/Contact" style="padding: 2px 12px;"><b>CONTACT</b></a>
+        </div>
     </div>
+    
+    <asp:ContentPlaceHolder ID="SubNav" runat="server"></asp:ContentPlaceHolder>
 
     <form runat="server">
         <asp:ScriptManager runat="server">
@@ -87,9 +53,9 @@
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
+
         <div class="container body-content">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server">
-            </asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
             <hr />
             <footer>
                 <p>&copy; <%: DateTime.Now.Year %> - Sparkline Sports</p>
@@ -102,8 +68,12 @@
             if (str.indexOf($(this).attr("href").toLowerCase()) > -1) {
                 $("a.active").removeClass("active");
                 $(this).addClass("active");
+                if ($(this).find("img").length) {
+                    $("#imgLogo").attr("src", "/img/SPARKLINE_WhiteText_WhiteLine.svg")
+                }
             }
         });
+
         $("a.active").parents().each(function () {
             if ($(this).is("a")) {
                 $(this).addClass("active");

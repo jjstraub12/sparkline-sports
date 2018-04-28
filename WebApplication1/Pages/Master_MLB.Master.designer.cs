@@ -7,27 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebApplication1 {
+namespace WebApplication1.Pages {
     
     
-    public partial class SiteMaster {
+    public partial class Master_MLB {
         
         /// <summary>
-        /// SubNav control.
+        /// ChildContent1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder SubNav;
-        
-        /// <summary>
-        /// MainContent control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder ChildContent1;
     }
 }

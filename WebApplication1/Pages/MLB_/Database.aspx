@@ -1,27 +1,11 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Database.aspx.cs" Inherits="WebApplication1.Pages.MLB.Database" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="/Pages/Master_MLB.Master" AutoEventWireup="true" CodeBehind="Database.aspx.cs" Inherits="WebApplication1.Pages.MLB.Database" %>
 
 <%@ Register Assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Namespace="System.Web.UI.DataVisualization.Charting" TagPrefix="asp" %>
 
 
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="ChildContent1" runat="server">
     <link rel="stylesheet" type="text/css" href="../../css/grid.css" />
     <link rel="stylesheet" type="text/css" href="../../css/mlb/database.css" />
-    <style>
-        .selected {
-            background-color: aqua;
-        }
-    </style>
-
-    <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-            <li><a runat="server" href="~/Pages/MLB">Home</a></li>
-            <li><a runat="server" href="~/Pages/MLB_/Scores">Scores</a></li>
-            <li><a runat="server" href="~/Pages/MLB_/Schedule">Schedule</a></li>
-            <li><a runat="server" href="~/Pages/MLB_/Standings">Standings</a></li>
-            <li><a runat="server" href="~/Pages/MLB_/Stats">Stats</a></li>
-            <li><a runat="server" href="~/Pages/MLB_/Database" class="selected">Database</a></li>
-        </ul>
-    </div>
     <div>
         <asp:UpdatePanel ID="upd_Panel" runat="server">
             <ContentTemplate>

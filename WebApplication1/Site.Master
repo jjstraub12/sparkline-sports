@@ -14,8 +14,58 @@
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
+    <style>
+        body {
+          margin: 0;
+          padding: 0;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .topnav {
+          overflow: hidden;
+          background-color: #333;
+        }
+
+        .topnav a {
+          float: left;
+          color: #f2f2f2;
+          text-align: center;
+          padding: 10px 12px;
+          text-decoration: none;
+          font: bold 14px;
+        }
+
+        .topnav a:hover {
+          background-color: #ddd;
+          color: black;
+        }
+
+        .topnav a.active {
+          background-color: aqua;
+          color: black;
+        }
+        .nav_logo {
+          float: left;
+          display: block;
+          margin: auto;
+          height: 50px;
+        }
+    </style>
+
+
 </head>
 <body>
+    <div id="nav" class="topnav">
+      <a href="/Default"><img src="/img/SPARKLINE_WhiteText_AquaLine.svg" alt="Sparkline Sports Logo" class="nav_logo" height="25"></a>
+      <a href="/Pages/MLB">MLB</a>
+      <a href="/Default">NBA</a>
+      <a href="/Default">NFL</a>
+      <a href="/Default">NCAAB</a>
+      <a href="/Default">NCAAF</a>
+      <a href="/About">ABOUT</a>
+      <a href="/Contact">CONTACT</a>
+    </div>
+
     <form runat="server">
         <asp:ScriptManager runat="server">
             <Scripts>
@@ -37,46 +87,6 @@
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
-
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/Pages/MLB/Home.aspx">MLB</a></li>
-                        <li><a runat="server" href="~/">NBA</a></li>
-                        <li><a runat="server" href="~/">NFL</a></li>
-                        <li><a runat="server" href="~/">NCAAB</a></li>
-                        <li><a runat="server" href="~/">NCAAF</a></li>
-                        <li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
-                    </ul>
-<%--                    <asp:LoginView runat="server" ViewStateMode="Disabled">
-                        <AnonymousTemplate>
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Account/Register">Register</a></li>
-                                <li><a runat="server" href="~/Account/Login">Log in</a></li>
-                            </ul>
-                        </AnonymousTemplate>
-                        <LoggedInTemplate>
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %> !</a></li>
-                                <li>
-                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
-                                </li>
-                            </ul>
-                        </LoggedInTemplate>
-                    </asp:LoginView>--%>
-                </div>
-            </div>
-        </div>
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
@@ -86,5 +96,19 @@
             </footer>
         </div>
     </form>
+    <script>
+        var str = location.href.toLowerCase();
+        $("#nav a").each(function () {
+            if (str.indexOf($(this).attr("href").toLowerCase()) > -1) {
+                $("a.active").removeClass("active");
+                $(this).addClass("active");
+            }
+        });
+        $("a.active").parents().each(function () {
+            if ($(this).is("a")) {
+                $(this).addClass("active");
+            }
+        });
+    </script>
 </body>
 </html>

@@ -40,6 +40,15 @@ namespace WebApplication1.Pages.MLB {
         protected global::System.Web.UI.WebControls.Label lbl_Selected;
         
         /// <summary>
+        /// ch_ReleasePoint control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.DataVisualization.Charting.Chart ch_ReleasePoint;
+        
+        /// <summary>
         /// gv_PitcherInfo control.
         /// </summary>
         /// <remarks>

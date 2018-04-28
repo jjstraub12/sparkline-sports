@@ -53,6 +53,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -182,6 +183,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
+    <None Include="Properties\PublishProfiles\sparklinesports.com - Web Deploy %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\sparklinesports.com - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="html\mlb\nav.html" />
@@ -658,12 +660,12 @@
     <Content Include="img\SPARKLINE_BlackText_AquaLine.svg" />
     <Content Include="img\SPARKLINE_FULL.svg" />
     <Content Include="img\SPARKLINE_WhiteText_AquaLine.svg" />
-    <Content Include="Pages\MLB\Database.aspx" />
-    <Content Include="Pages\MLB\Home.aspx" />
-    <Content Include="Pages\MLB\Schedule.aspx" />
-    <Content Include="Pages\MLB\Scores.aspx" />
-    <Content Include="Pages\MLB\Standings.aspx" />
-    <Content Include="Pages\MLB\Stats.aspx" />
+    <Content Include="Pages\MLB_\Database.aspx" />
+    <Content Include="Pages\MLB.aspx" />
+    <Content Include="Pages\MLB_\Schedule.aspx" />
+    <Content Include="Pages\MLB_\Scores.aspx" />
+    <Content Include="Pages\MLB_\Standings.aspx" />
+    <Content Include="Pages\MLB_\Stats.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -850,46 +852,46 @@
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Pages\CommonClass.cs" />
-    <Compile Include="Pages\MLB\Database.aspx.cs">
+    <Compile Include="Pages\MLB_\Database.aspx.cs">
       <DependentUpon>Database.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\MLB\Database.aspx.designer.cs">
+    <Compile Include="Pages\MLB_\Database.aspx.designer.cs">
       <DependentUpon>Database.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\MLB\Home.aspx.cs">
-      <DependentUpon>Home.aspx</DependentUpon>
+    <Compile Include="Pages\MLB.aspx.cs">
+      <DependentUpon>MLB.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\MLB\Home.aspx.designer.cs">
-      <DependentUpon>Home.aspx</DependentUpon>
+    <Compile Include="Pages\MLB.aspx.designer.cs">
+      <DependentUpon>MLB.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\MLB\Schedule.aspx.cs">
+    <Compile Include="Pages\MLB_\Schedule.aspx.cs">
       <DependentUpon>Schedule.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\MLB\Schedule.aspx.designer.cs">
+    <Compile Include="Pages\MLB_\Schedule.aspx.designer.cs">
       <DependentUpon>Schedule.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\MLB\Scores.aspx.cs">
+    <Compile Include="Pages\MLB_\Scores.aspx.cs">
       <DependentUpon>Scores.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\MLB\Scores.aspx.designer.cs">
+    <Compile Include="Pages\MLB_\Scores.aspx.designer.cs">
       <DependentUpon>Scores.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\MLB\Standings.aspx.cs">
+    <Compile Include="Pages\MLB_\Standings.aspx.cs">
       <DependentUpon>Standings.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\MLB\Standings.aspx.designer.cs">
+    <Compile Include="Pages\MLB_\Standings.aspx.designer.cs">
       <DependentUpon>Standings.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\MLB\Stats.aspx.cs">
+    <Compile Include="Pages\MLB_\Stats.aspx.cs">
       <DependentUpon>Stats.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\MLB\Stats.aspx.designer.cs">
+    <Compile Include="Pages\MLB_\Stats.aspx.designer.cs">
       <DependentUpon>Stats.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

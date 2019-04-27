@@ -13,6 +13,24 @@ namespace WebApplication1.Pages {
     public partial class Steve {
         
         /// <summary>
+        /// lbl_enter_date control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_enter_date;
+        
+        /// <summary>
+        /// txt_date control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_date;
+        
+        /// <summary>
         /// lbl_mlb control.
         /// </summary>
         /// <remarks>

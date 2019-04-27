@@ -13,12 +13,14 @@ namespace WebApplication1.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if(!IsPostBack)
+                txt_date.Text = DateTime.Now.ToString("MM/dd/yyyy");
         }
         protected void btn_starters_Click(object sender, EventArgs e)
         {
-            DataTable dt = Function_Classes.get_from_sql("SELECT * FROM [dbo].[tbl_Todays_Games] ORDER BY time_game, away_team_href", Variables.mlb_con_string, true);
-            ExportToExcel(dt, "TodaysStarters.xls");
+            DataTable dt = Function_Classes.get_from_sql("EXEC export.day_xfip '" + txt_date.Text + "'", Variables.mlb_con_string, true);
+            string date_string = Convert.ToDateTime(txt_date.Text).ToString("yyyyMMdd");
+            ExportToExcel(dt, "GameInfo_" + date_string + ".xls");
         }
         protected void btn_xfip_Click(object sender, EventArgs e)
         {
@@ -43,6 +45,8 @@ namespace WebApplication1.Pages
                 tab = "";
                 for (i = 0; i < dt.Columns.Count; i++)
                 {
+                    if (dr[i].ToString() == "\n\t")
+                        dr[i] = "";
                     Response.Write(tab + dr[i].ToString());
                     tab = "\t";
                 }
